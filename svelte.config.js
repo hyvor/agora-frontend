@@ -13,6 +13,8 @@ const config = {
 		output: {
 			bundleStrategy: 'single'
 		},
+
+		appDir: 'files'
 	}
 };
 
