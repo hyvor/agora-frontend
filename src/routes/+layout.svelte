@@ -2,7 +2,7 @@
 	import type { Snippet } from 'svelte';
 	import '../app.css';
 	import Header from './@components/header/Header.svelte';
-	import LeftNavGroup from './@components/leftnav/LeftNavGroup.svelte';
+	import LeftNav from './@components/leftnav/LeftNav.svelte';
 
 	interface Props {
 		children?: Snippet;
@@ -14,9 +14,7 @@
 <Header />
 
 <div class="container">
-	<nav>
-		<LeftNavGroup />
-	</nav>
+	<LeftNav />
 
 	{@render children?.()}
 </div>
@@ -27,14 +25,5 @@
 		margin: auto;
 		display: flex;
 		gap: 15px;
-	}
-
-	nav {
-		width: 250px;
-		border-radius: 20px;
-		background-color: white;
-		box-shadow: 0 0 30px #0000000d;
-		height: calc(100vh - 100px);
-		flex-shrink: 0;
 	}
 </style>
