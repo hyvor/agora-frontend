@@ -3,6 +3,7 @@
 	import '../app.css';
 	import Header from './@components/header/Header.svelte';
 	import LeftNav from './@components/leftnav/LeftNav.svelte';
+	import PageLoader from './@components/pageloader/PageLoader.svelte';
 
 	interface Props {
 		children?: Snippet;
@@ -11,13 +12,15 @@
 	let { children }: Props = $props();
 </script>
 
-<Header />
+<PageLoader>
+	<Header />
 
-<div class="container">
-	<LeftNav />
+	<div class="container">
+		<LeftNav />
 
-	{@render children?.()}
-</div>
+		{@render children?.()}
+	</div>
+</PageLoader>
 
 <style>
 	.container {
